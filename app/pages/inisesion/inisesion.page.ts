@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/servicios/auth.service';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-inisesion',
@@ -35,8 +36,7 @@ export class InisesionPage implements OnInit {
       })
      }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   login(){
     this.bandera = false;

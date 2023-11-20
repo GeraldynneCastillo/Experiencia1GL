@@ -7,7 +7,7 @@
       "password": "duocduoc",
       "asignatura1": "Matemáticas",
       "asignatura2": "Lenguaje",
-      "sede": "Sede Maipú"
+      "sede": "Sede San Joaquín"
     }
   ],
   "alumnos": [
@@ -48,6 +48,20 @@
       "asignatura": "Matemáticas",
       "fechaCreacion": "19/11/2023, 20:25:48",
       "id": 4
+    },
+    {
+      "contenido": "holaxd",
+      "correoProfesor": "ge.castillor@duocuc.cl",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "20-11-2023, 10:14:33",
+      "id": 5
+    },
+    {
+      "contenido": "bienvenidosss",
+      "correoProfesor": "ge.castillor@duocuc.cl",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "20-11-2023, 10:15:40",
+      "id": 6
     }
   ]
 }

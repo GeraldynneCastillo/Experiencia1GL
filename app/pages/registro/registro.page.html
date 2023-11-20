@@ -1,0 +1,89 @@
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon name="arrow-back" routerLink="/inicio"></ion-icon>
+      <h1 class="text">Registrarse</h1>
+    </div>
+    
+    <p>Crea una cuenta con nosotros!<br /> ❤ </p>
+  </div>
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <form [formGroup]="registerForm">
+          <ion-item>
+            <ion-icon name="person"></ion-icon>
+            <ion-input type="text" formControlName="nombre" placeholder="Ingrese su nombre"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="mail"></ion-icon>
+            <ion-input type="email" formControlName="email" placeholder="Ingrese su correo"></ion-input>
+          </ion-item>
+          <div *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.dirty || registerForm.get('email')?.touched)">
+            <div class="mensaje" *ngIf="registerForm.get('email')?.hasError('required')">
+              <p>¡Correo Electrónico obligatorio!</p>
+            </div>
+            <div class="mensaje" *ngIf="registerForm.get('email')?.hasError('email')">
+              <p>¡Debe ser una dirección de correo válida!</p>
+            </div>
+          </div>
+
+          <ion-item>
+            <ion-icon name="lock-closed"></ion-icon>
+            <ion-input type="password" formControlName="password" placeholder="Contraseña"></ion-input>
+          </ion-item>
+          <div *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched)">
+            <div class="mensaje" *ngIf="registerForm.get('password')?.hasError('required')">
+              <p>¡Contraseña obligatoria!</p>
+            </div>
+            <div class="mensaje" *ngIf="registerForm.get('password')?.hasError('minlength')">
+              <p>¡La contraseña debe tener mínimo 8 carácteres!</p>
+            </div>
+          </div>
+
+          <ion-item>
+            <ion-select interface="action-sheet" formControlName="asignatura1" placeholder="Seleccione su ramo a impartir">
+              <ion-select-option value="Matemáticas">Matemáticas</ion-select-option>
+              <ion-select-option value="Lenguaje">Lenguaje</ion-select-option>
+              <ion-select-option value="Historia">Historia</ion-select-option>
+              <ion-select-option value="Ciencias">Ciencias</ion-select-option>
+              <ion-select-option value="Ed. Física">Ed. Física</ion-select-option>
+              <ion-select-option value="Química">Química</ion-select-option>
+              <ion-select-option value="Biología">Biología</ion-select-option>
+              <ion-select-option value="Arte">Arte</ion-select-option>
+              <ion-select-option value="Música">Música</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+          <ion-item>
+            <ion-select interface="action-sheet" formControlName="asignatura2" placeholder="Seleccione su 2do ramo a impartir">
+              <ion-select-option value="Matemáticas">Matemáticas</ion-select-option>
+              <ion-select-option value="Lenguaje">Lenguaje</ion-select-option>
+              <ion-select-option value="Historia">Historia</ion-select-option>
+              <ion-select-option value="Ciencias">Ciencias</ion-select-option>
+              <ion-select-option value="Ed. Física">Ed. Física</ion-select-option>
+              <ion-select-option value="Química">Química</ion-select-option>
+              <ion-select-option value="Biología">Biología</ion-select-option>
+              <ion-select-option value="Arte">Arte</ion-select-option>
+              <ion-select-option value="Música">Música</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+
+            <ion-select interface="action-sheet" formControlName="sede" placeholder="Seleccione su sede">
+              <ion-select-option value="Sede Maipú">Sede Maipú</ion-select-option>
+              <ion-select-option value="Sede Concepción">Sede Concepción</ion-select-option>
+              <ion-select-option value="Sede San Joaquín">Sede San Joaquín</ion-select-option>
+              <ion-select-option value="Sede San Andrés">Sede San Andrés</ion-select-option>
+              <ion-select-option value="Sede San Bernardo">Sede San Bernardo</ion-select-option>
+              <ion-select-option value="Sede Los Ángeles">Sede Los Ángeles</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-button shape="round" expand="full" color="success" class="ion-margin-top" (click)="registroDocente()" [disabled]="!registerForm.valid" routerLink="/inicio">
+            Registrarse
+          </ion-button>
+        </form> 
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

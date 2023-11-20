@@ -1,0 +1,61 @@
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon name="arrow-back" routerLink="/inicio"></ion-icon>
+    </div>
+    <h1>Inicio sesión</h1>
+    <p>Inicia sesión con tu cuenta para acceder a todas las funciones de nuestra aplicación.</p>
+    <div class="container">❤❤❤❤❤❤</div>
+  </div>
+  
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+
+      <form [formGroup]="loginForm">
+        <ion-item>
+          <ion-icon name="mail"></ion-icon>
+          <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+        
+        <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || 
+                loginForm.get('email')?.touched)">
+          <div  *ngIf="loginForm.get('email')?.hasError('required')">
+            *Correo electrónico obligatorio
+          </div>
+          <div *ngIf="loginForm.get('email')?.hasError('minlength')">
+            *Correo Mínimo de 4 caracteres 
+          </div>
+        </div>
+
+        <ion-item>
+          <ion-icon name="lock-closed"></ion-icon>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+
+        <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || 
+                loginForm.get('password')?.touched)">
+          <div *ngIf="loginForm.get('password')?.hasError('required')">
+            *Password es obligatorio
+          </div>
+          <div *ngIf="loginForm.get('password')?.hasError('minlength')">
+            *Password Mínimo de 4 caracteres 
+          </div>
+        </div>
+        <div *ngIf="bandera">
+          <p>Correo Electrónico o Contraseña inválidos</p>
+      </div>
+
+          <ion-row>
+            <ion-col>
+              <ion-button shape="round" expand="full" color="success" class="ion-margin-top" (click)="login()" [disabled]="!loginForm.valid">
+                Ingresar
+              </ion-button>
+            </ion-col>
+          </ion-row>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>
+

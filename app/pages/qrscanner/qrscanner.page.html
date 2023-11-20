@@ -1,0 +1,19 @@
+<ion-header *ngIf="!scannedResult">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="success">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo" *ngIf="bandera">
+
+  <div class="scaning" >
+    <h1 color="success">Scann QR</h1>
+    <ion-button  color="success" (click)="startScan()">
+      Scannear
+    </ion-button>
+  </div>
+
+</ion-content>

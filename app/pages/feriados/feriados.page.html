@@ -1,0 +1,32 @@
+
+<ion-content [fullscreen]="true">
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon name="arrow-back" routerLink="/inicio"></ion-icon>
+    </div>
+    <h1>Servicio de Días Feriados</h1>
+    <p>Aquí se encuentran los días feriados del año 2023.</p>
+    <div class="container">❤❤❤❤❤❤</div>
+  </div>
+  
+  <div class="wrapper" style="padding-top: 5px;">
+    <ion-card class="form-wrapper">
+      <ion-card-content style="text-align: center;">
+        <ion-card *ngFor="let c of articles" class="cartas" color="success">
+          <ion-card-header>
+            <ion-card-subtitle>
+              <span class="text-primary"></span>
+            </ion-card-subtitle>
+            <ion-card-title>{{c.title}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{c.type}}</p>
+            <p>{{c.date}}</p> 
+            <div *ngIf="c.inalienable; else noDate">Irrenunciable: Si</div>
+            <ng-template #noDate>Irrenunciable: No</ng-template>
+          </ion-card-content>
+        </ion-card>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

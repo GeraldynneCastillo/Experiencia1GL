@@ -1,0 +1,46 @@
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon name="arrow-back" routerLink="/inicio"></ion-icon>
+    </div>
+    <div class="icon2">
+      <ion-icon name="menu-outline" routerLink="/qrhistorial"></ion-icon>
+    </div>
+    <h1>Bienvenido profesor!</h1>
+    <p>En esta sección podrás crear tus invitaciones vía QR!</p>
+    <div class="container">❤❤❤❤❤❤</div>
+
+  </div>
+  
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+  
+          <ion-card  class="ion-text-center">
+            <ion-item class="color">
+              <ion-select interface="action-sheet" placeholder="Asignatura" [(ngModel)]="data.asignaturaProfe">
+                <ion-select-option value="{{ asignatura1 }}">{{ asignatura1 }}</ion-select-option>
+                <ion-select-option value="{{ asignatura2 }}">{{ asignatura2 }}</ion-select-option>
+              </ion-select>
+            </ion-item>
+      
+            <ion-item class="color">
+              <ion-label position="floating">Que desea comunicar?</ion-label>
+              <ion-input type="text" [(ngModel)]="data.texto"></ion-input>
+            </ion-item>
+
+      
+            <ion-button  class="color" expand="block" shape="round" (click)="generarQr()" style="margin-left: 30px; margin-right: 30px; margin-top: 50px;">
+              Generar Qr
+            </ion-button>
+      
+            <ion-card-content >
+              <qrcode [qrdata]="mensaje" [width]="150" [errorCorrectionLevel]="'M'" ></qrcode>
+            </ion-card-content>
+            
+          </ion-card>
+
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>

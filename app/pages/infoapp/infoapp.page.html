@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Info</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Info</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Agregar el card aquí -->
+  <ion-card>
+    <img src="assets/logodefi.png"class="ion-padding" />
+    <ion-card-header>
+      <ion-card-title class="texto">¿Quiénes somos?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="contenido">
+      RegistrAPP es la solución perfecta para el registro de asistencia en clases. Esta aplicación móvil simplifica el proceso de registro tanto para docentes como para estudiantes. Aquí hay una breve descripción de cómo funciona:
+      <p class="pe">✨Genera un Código QR: Los docentes pueden iniciar el registro de asistencia con un toque. RegistrAPP generará un código QR único para la clase.
+        Generación de Código QR</p> 
+        <p class="pe">✨Escanear y Listo: Los estudiantes abren la aplicación, escanean el código QR que se muestra en el aula y su asistencia queda registrada automáticamente con la fecha y la hora.</p>
+        <p class="pe">✨Historial de Asistencias: Tanto docentes como estudiantes pueden consultar su historial de asistencias en cualquier momento.
+          Historial de Asistencias</p>   
+        <p class="pe">✨¡Es así de simple! RegistrAPP elimina la necesidad de tomar asistencia manualmente y reduce errores. ¡Regístrate y ahorra tiempo en el aula con RegistrAPP!</p> 
+      <p class="pe">Aquí tienes más información sobre el contexto actual:</p>
+      <ul>
+        <li><a href="https://www.uc.cl/noticias/desafios-para-la-educacion-escolar-post-y-con-pandemia/" target="_blank">Desafíos Educativos en la Pandemia</a></li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

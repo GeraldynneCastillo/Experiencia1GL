@@ -1,0 +1,66 @@
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon name="arrow-back" routerLink="/inicio"></ion-icon>
+      <h1 class="text">Registrarse</h1>
+    </div>
+    
+    <p>Crea una cuenta con nosotros!<br /> ❤ </p>
+  </div>
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <form [formGroup]="registerAlumnoForm">
+          <ion-item>
+            <ion-icon name="person"></ion-icon>
+            <ion-input type="text" formControlName="nombre" placeholder="Ingrese su nombre"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="mail"></ion-icon>
+            <ion-input type="email" formControlName="email" placeholder="Ingrese su correo"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="lock-closed"></ion-icon>
+            <ion-input type="password" formControlName="password" placeholder="Contraseña"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-select interface="action-sheet" formControlName="carrera" placeholder="Carrera">
+              <ion-select-option value="Ingeniería en Informática">Ingeniería en Informática</ion-select-option>
+              <ion-select-option value="Ingeniería en Electricidad y Automatización Industrial">Ingeniería en Electricidad y Automatización Industrial</ion-select-option>
+              <ion-select-option value="Técnico en Enfermería">Técnico en Enfermería</ion-select-option>
+              <ion-select-option value="Diseño Gráfico">Diseño Gráfico</ion-select-option>
+              <ion-select-option value="Ingeniería en Construcción">Ingeniería en Construcción</ion-select-option>
+              <ion-select-option value="Administración de Empresas">Administración de Empresas</ion-select-option>
+              <ion-select-option value="Educación Parvularia">Educación Parvularia</ion-select-option>
+              <ion-select-option value="Ingeniería en Sonido">Ingeniería en Sonido</ion-select-option>
+              <ion-select-option value="Kinesiología">Kinesiología</ion-select-option>
+              <ion-select-option value="Psicopedagogía">Psicopedagogía</ion-select-option>
+              <ion-select-option value="Ingeniería en Prevención de Riesgos">Ingeniería en Prevención de Riesgos</ion-select-option>
+              <ion-select-option value="Turismo">Turismo</ion-select-option>
+              <ion-select-option value="Contabilidad General">Contabilidad General</ion-select-option>
+              <ion-select-option value="Ingeniería Comercial">Ingeniería Comercial</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+    
+          <ion-item>
+            <ion-select interface="action-sheet" formControlName="sede" placeholder="Seleccione su sede">
+              <ion-select-option value="Sede Maipú">Sede Maipú</ion-select-option>
+              <ion-select-option value="Sede Concepción">Sede Concepción</ion-select-option>
+              <ion-select-option value="Sede San Joaquín">Sede San Joaquín</ion-select-option>
+              <ion-select-option value="Sede San Andrés">Sede San Andrés</ion-select-option>
+              <ion-select-option value="Sede San Bernardo">Sede San Bernardo</ion-select-option>
+              <ion-select-option value="Sede Los Ángeles">Sede Los Ángeles</ion-select-option>
+            </ion-select>
+          </ion-item>
+          
+          <ion-button shape="round" expand="full" color="success" class="ion-margin-top" (click)="registroAlumno()" [disabled]="!registerAlumnoForm.valid" routerLink="/inicio">
+            Registrarse
+          </ion-button>
+        </form> 
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

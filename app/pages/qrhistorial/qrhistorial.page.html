@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true">
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon name="arrow-back" routerLink="/inicio"></ion-icon>
+    </div>
+    <h1>Bienvenido profesor!</h1>
+    <p>Aquí tiene su historial de invitaciones vía QR!</p>
+    <div class="container">❤❤❤❤❤❤</div>
+  </div>
+  
+  <div class="wrapper" style="padding-top: 5px;">
+    <ion-card class="form-wrapper">
+
+      <ion-card-content style="text-align: center;" *ngFor="let a of mensajes">
+        <ion-card  class="cartas" color="success">
+
+          <ion-card-header>
+            <ion-card-subtitle>
+              <span class="text-primary"></span>
+            </ion-card-subtitle>
+            <ion-card-title>Asignatura: </ion-card-title>
+            <p>{{a.asignatura}}</p>
+          </ion-card-header>
+
+          <ion-card-content>
+            <p>Docente: {{a.correoProfesor}}</p>
+            <br>
+            <p>Fecha de Creación: </p> 
+            <p>{{a.fechaCreacion}}</p>
+          </ion-card-content>
+
+          <ion-card-content>
+            <p>Contenido:</p>
+            <p>{{a.contenido}}</p>
+          </ion-card-content>
+
+        </ion-card>
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,53 @@
+{
+  "docentes": [
+    {
+      "id": 1,
+      "nombre": "Cristina",
+      "email": "ge.castillor@duocuc.cl",
+      "password": "duocduoc",
+      "asignatura1": "Matemáticas",
+      "asignatura2": "Lenguaje",
+      "sede": "Sede Maipú"
+    }
+  ],
+  "alumnos": [
+    {
+      "id": 1,
+      "nombre": "Lau",
+      "email": "la.olaya@duocuc.cl",
+      "password": "duocduoc",
+      "carrera": "Educación Parvularia",
+      "sede": "Sede Concepción"
+    }
+  ],
+  "QRS": [
+    {
+      "id": 1,
+      "contenido": "Bienvenidos",
+      "correoProfesor": "la.olaya@duocuc.cl",
+      "asignatura": "lenguaje",
+      "fechaCreacion": "19/11/2023, 19:47:55"
+    },
+    {
+      "contenido": "hola",
+      "correoProfesor": "ge.castillor@duocuc.cl",
+      "asignatura": "Matemáticas",
+      "fechaCreacion": "19/11/2023, 19:47:55",
+      "id": 2
+    },
+    {
+      "contenido": "Hola a todos",
+      "correoProfesor": "ge.castillor@duocuc.cl",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "19/11/2023, 19:47:55",
+      "id": 3
+    },
+    {
+      "contenido": "Bienveni@s",
+      "correoProfesor": "ge.castillor@duocuc.cl",
+      "asignatura": "Matemáticas",
+      "fechaCreacion": "19/11/2023, 20:25:48",
+      "id": 4
+    }
+  ]
+}

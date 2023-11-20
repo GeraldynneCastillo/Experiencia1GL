@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@500&family=Dosis:wght@600&display=swap');
+
+ion-content{
+    -background: #e0dfe6;
+#header{
+    height: 37%;
+    background: #7972e6;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 20px;
+
+ #app-bar{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    ion-icon{
+        font-size: 24px;
+        margin-left: -5px;
+    }
+    #logo{
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        align-self: center;
+
+     img{
+        width: 70px;
+     }   
+    }
+ }   
+ h1{
+    font-size: 25px;
+    margin-bottom: 5px;
+    font-family: 'Cabin Condensed', sans-serif;
+}
+ p{
+    font-size: 17px;
+    line-height: 1.4;
+    font-family: 'Dosis', sans-serif;
+ }
+
+}
+.wrapper{
+    position: absolute;
+    top: 29%;
+    left: 4%;
+    right: 4%;
+    .form-wrapper{
+        box-shadow: none;
+        border-radius: 20px;
+        padding: 15px 10px;
+        margin-top: 20px;
+
+        ion-item{
+            --background: #efefef;
+            --padding-start: 10px;
+            --highlight-height: 0;
+            --border-width: 0;
+            --padding-top: 0;
+            --min-height: 40px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+
+            ion-icon{
+                font-size: 18px;
+            }
+            ion-input{
+                margin-left: 10px;
+                font-size: 14px;
+
+            }
+        }
+        ion-button{
+            margin-top: 25px;
+            font-family: 'Dosis', sans-serif;
+        }
+    }
+    
+}
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
